@@ -29,4 +29,24 @@ public class RestAssuredPractice extends BaseClass{
 		System.out.println(response.getBody().asString());
 		System.out.println(response.getBody().jsonPath().get("MRData.CircuitTable.Circuits.Location.country"));
 	}
+	
+	@Test
+	public void test2() {
+		
+		Response response = given().
+				pathParam("circuitId", "monaco").
+				//contentType(ContentType.JSON).
+	    when().
+	        get("/f1/2017/circuits/{circuitId}.json").
+	    then().
+	    	assertThat().
+	    	contentType(ContentType.JSON).
+	    	statusCode(200).
+	    	and().
+	    	extract().response();
+	    
+		System.out.println(response.statusCode());
+		System.out.println(response.getBody().asString());
+		System.out.println(response.getBody().jsonPath().get("MRData.CircuitTable.Circuits.Location.country"));
+	}
 }
