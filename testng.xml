@@ -3,7 +3,7 @@
 <suite name="Practice Suite">
   <test name="Test Basics 1">
       <classes>
-      	<class name="com.test.RestAssuredPractice"/>
+      	<class name="com.test.BookingTestAPI"/>
       </classes>
   </test> 
 </suite>

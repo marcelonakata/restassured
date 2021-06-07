@@ -27,7 +27,7 @@ public class BookingTestAPI extends BaseClass{
 	    	assertThat().
 	    	contentType(ContentType.JSON).
 	    	statusCode(200).
-	    	body("bookingid", hasItems(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).
+	    	//body("bookingid", hasItems(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)).
 	    	and().
 	    	extract().response();
 	    
